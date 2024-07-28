@@ -1,0 +1,39 @@
+/* Loginscreen.css */
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    margin-top:-80px ;
+  }
+  
+  .login-form {
+    max-width: 600px;
+    width: 85rem;
+  }
+  
+  .card {
+    border-radius: 10px;
+    display: flex;
+   
+    align-items: center;
+  }
+  
+  .card h1 {
+    color: #343a40;
+  }
+  
+  .card .form-control {
+    border-radius: 5px;
+  }
+  
+  .card .btn {
+    border-radius: 5px;
+    width:150px ;
+    justify-content: center;
+    
+
+  }
+  
