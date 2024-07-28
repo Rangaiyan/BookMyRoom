@@ -32,7 +32,7 @@ BookMyRoom aims to simplify room booking processes for various use cases such as
 - **Frontend**: React
 - **API Requests**: Axios
 - **Payment Processing**: Stripe
-- **Styling**: CSS
+- **Styling**: CSS,BootStrap
 
 ## Installation
 
