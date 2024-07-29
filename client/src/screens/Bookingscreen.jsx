@@ -109,7 +109,7 @@ function Bookingscreen() {
                 currency="INR"
                 stripeKey="pk_test_51PfPjUAyBtgnOaAVU2C6XTZoggdC0D19h663Y26QDZpGgxjmwQFwLhxiVa0t6Jz55sjdKN0auFehaeonyDg2b5Ss00G8CvHTtM"
               >
-                <button className="btn btn-dark">Pay Now</button>
+                <button className="btn btn-dark" style={{backgroundColor:'black'}}>Pay Now</button>
               </StripeCheckout>
             </div>
           </div>

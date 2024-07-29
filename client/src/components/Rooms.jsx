@@ -38,12 +38,12 @@ function Rooms({ room, fromdate, todate }) {
         <div style={{ float: "right" }} className="pb-3 justify-content-evenly">
           {fromdate && todate && (
             <Link to={`/book/${room._id}/${fromdate}/${todate}`}>
-              <Button variant="dark" style={{ marginRight: "10px" }}>
+              <Button variant="dark" style={{ marginRight: "10px" ,backgroundColor:'black'}} >
                 Book Now
               </Button>
             </Link>
           )}
-          <Button variant="dark" onClick={handleShow}>
+          <Button variant="dark" onClick={handleShow} style={{backgroundColor:'black'}}>
             View Details
           </Button>
         </div>
@@ -82,7 +82,7 @@ function Rooms({ room, fromdate, todate }) {
             <h4>Contact: {room.phonenumber}</h4>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={handleClose} style={{backgroundColor:'black'}}>
               Close
             </Button>
           </Modal.Footer>

@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #767676!important;
+  background-color: #F0ECE5!important;
 }
 
 code {
@@ -40,11 +40,11 @@ code {
   background-color: black !important;
 }
 .na{
-  background-color: black !important;
+  background-color: #180161!important;
 }
-.btn{
+/* .btn{
   background-color: black !important;
-}
+} */
 .as{
   background-color: black !important
 }

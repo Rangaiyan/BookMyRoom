@@ -14,6 +14,11 @@ app.use("/api/rooms", roomsRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/bookings", bookingRoute);
 // Define the port on which the server will listen for incoming requests
+app.get("/", (req, res) => {
+    res.send("Welcome to the Guestroom Booking API");
+  });
+
+
 const port = process.env.PORT || 5000;
 
 // Start the server and listen on the specified port

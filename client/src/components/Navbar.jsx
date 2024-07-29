@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -10,8 +9,8 @@ function Navbar() {
   }
 
   return (
-    <div className="na" style={{ backgroundColor: 'black' }}>
-      <nav className="navbar navbar-expand-lg " style={{ backgroundColor: 'black' }}>
+    <div className="na" style={{ backgroundColor: '#180161' }}>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#000000' }}>
         <a className="navbar-brand text-white pl-4" href="/home">
           BookMyRoom
         </a>
@@ -40,14 +39,19 @@ function Navbar() {
                     aria-expanded="false"
                     style={{ backgroundColor: 'black', paddingRight: '10px' }}
                   >
-                    <i className="fa fa-user p-2" ></i> {user.name}
+                    <i className="fa fa-user p-2"></i> {user.name}
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a className="dropdown-item" href="/profile">
                       Profile
                     </a>
+                    {user.isAdmin && (
+                      <a className="dropdown-item" href="/admin">
+                        Admin Panel
+                      </a>
+                    )}
                     <a className="dropdown-item" href="#" onClick={logout}>
-                   <i className="fa fa-share-square-o " style={{ marginTop:''}}></i>   Logout
+                      <i className="fa fa-share-square-o"></i> Logout
                     </a>
                   </div>
                 </div>

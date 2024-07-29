@@ -375,7 +375,7 @@ export  function Addroom() {
           value={roomNumber}
           onChange={(e) => setRoomNumber(e.target.value)}
         />
-        <button className="btn btn-light" style={{ float: 'right', color: 'white' }} onClick={addRoom}>
+        <button className="btn btn-light" style={{ float: 'right', color: 'white' ,backgroundColor:"black"}} onClick={addRoom}>
           Add Room
         </button>
       </div>

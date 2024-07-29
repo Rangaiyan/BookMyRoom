@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
-
+// const Listing = require('../models/Listing');
 // Register route
 router.post('/register', async (req, res) => {
     const { name, email, password ,isAdmin} = req.body;
@@ -67,6 +67,35 @@ router.get("/getallusers",async(req,res)=>{
     }
 });
 
+
+
+
+router.get('/filter', async (req, res) => {
+    const { fromDate, toDate, searchKey } = req.query;
+    
+    try {
+      let query = {};
+      
+      if (searchKey) {
+        query.name = { $regex: searchKey, $options: 'i' };
+      }
+      
+      if (fromDate && toDate) {
+        query.availability = {
+          $elemMatch: {
+            from: { $gte: new Date(fromDate) },
+            to: { $lte: new Date(toDate) }
+          }
+        };
+      }
+      
+      const listings = await Listing.find(query).populate('creator');
+      res.status(200).json(listings);
+    } catch (err) {
+      res.status(404).json({ message: "Failed to fetch listings", error: err.message });
+      console.log(err);
+    }
+  });
 
 
 module.exports = router;
